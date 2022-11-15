@@ -9,10 +9,15 @@ int numFirst = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите число (C) для возведения числа (N) в степень (С): ");
 int numSecond = Convert.ToInt32(Console.ReadLine());
 
-int result=numFirst;
-
-for (int i = 1; i < numSecond; i++)
+int Exponentiation(int numFirst, int numSecond)
 {
-    result=result*numFirst;
+    int result=numFirst;
+    for (int i = 1; i < numSecond; i++)
+    {
+        result=result*numFirst;
+    }
+    return result;
 }
+int result = Exponentiation(numFirst, numSecond);
+
 System.Console.Write($"Число {numFirst} возведенное в степень {numSecond} = {result}");
